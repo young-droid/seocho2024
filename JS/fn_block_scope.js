@@ -68,3 +68,52 @@ console.log("-----------");
   console.log(kk); // console.log(kk, yy); <-Error. ? yy is not defined in global scope
   f2("third"); // global f2 실행
 }
+
+console.log("-----closure practice-----");
+
+let user;
+{
+  const privateUser = { id: 1, name: "Hong" };
+  user = privateUser; // 이 user 변수가 하위(Block) 스코프의 privateUser를 참조
+}
+// block은 끝나서 이 block의 BlockExecutionContext는 ECS에서 사라졌지만,
+// privateUser를 user가 계속 참조하고 있어 BlockLexicalEnvironment(DecEnvRec)는 사라질 수 없다!!
+
+user.age = 30; // user refer to privateUser ⇒ 실제로 privateUser가 변경!
+console.log(user); // { id: 1, name: 'Hong', age: 30 }
+//-> 여기에서 user를 클로저 라고 부른다
+
+console.log("-----순수 함수, 비순수 함수-----");
+console.log("순수함수: 고수");
+
+{
+  function counter() {
+    let count = 0;
+    return function X() {
+      count += 1;
+      return count;
+    };
+  }
+  const counter1 = counter();
+  const counter2 = counter();
+  console.log(counter1()); // 1
+  console.log(counter1()); // 2
+  console.log(counter2()); // 1
+  console.log(counter2()); // 2
+}
+// 같은 인풋에 값이 달라지지만, let count 의 변형이 함수 외부에서 일어나지 않기 때문에 (side effect 가 없음) 이것은 순수함수. 고수!
+
+console.log("비순수함수: 하수");
+
+{
+  let count = 0; // 외부변수(오염우려)
+  function counter() {
+    count += 1;
+    return count;
+  }
+  // 하나의 counter만 사용 가능
+  console.log(counter()); // 1
+  console.log(counter()); // 2
+  console.log(counter()); // 3
+}
+// 같은 인풋에 값이 계속 달라진다. 여기서 let count 는 함수 바깥에 있으며 변형이 일어나고 있기 때문에 (side effect 존재중) 이것은 비순수함수. 하수!
