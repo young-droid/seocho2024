@@ -23,7 +23,7 @@ function fn1(x) {
 var fn2 = function (x, y) {};
 
 //3.
-const f3 = (x, y) => {};
+const f33 = (x, y) => {};
 
 fn1(hong);
 // fn2();
