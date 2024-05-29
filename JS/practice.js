@@ -193,7 +193,7 @@ const arr113_1 = [
 //위에서 만든 객체를 다시 배열로 만드시오. (makeArrayFromObject)
 //hint. [k, …obj[k]]
 // => [['A', 10, 20], ['B', 30, 40], ['C', 50, 60, 70]]
-
+console.log('==== 위에서 만든 객체를 다시 배열로 만들기 ====');
 const objarr1 = makeObjectFromArray([
   ['A', 10, 20],
   ['B', 30, 40],
