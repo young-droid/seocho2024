@@ -20,3 +20,12 @@ class Dog extends Animal {
 }
 const lucy = new Dog('Lucy');
 lucy.bark();
+
+class Pig extends Animal {
+  bark() {
+    console.log('Oink, Oink!');
+  }
+}
+
+const gg = new Pig('꿀꿀이');
+gg.bark();
