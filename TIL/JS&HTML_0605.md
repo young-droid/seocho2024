@@ -7,10 +7,12 @@ https://jsonplaceholder.typicode.com/users/1
 ## 숙제 (라고 쓰고 공부 필요한 사이트)
 ** Type Script **  
 https://www.typescriptlang.org/docs/handbook/intro.html
-> 여기가 타입 스크립트 원조 맛집 
+> 여기가 타입 스크립트 원조 맛집
+
 ** 테일윈드 **  
 https://tailwindcss.com/docs/installation
-> CSS 를 쉽게 만들 수 있는 사이트 
+> CSS 를 쉽게 만들 수 있는 사이트
+
 ** 부트스트랩 **  
 https://getbootstrap.com/
 > 테일윈드 같이 CSS 를 쉽게 만들 수 있는 사이트 
