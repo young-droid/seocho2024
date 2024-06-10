@@ -1,4 +1,4 @@
-# HTML(Bootstrap, TailWind), JS
+# CSS(Bootstrap, TailWind), JS
 
 ## Browser Rendering
 1. Connect & Request to Server
@@ -13,3 +13,10 @@
   - 텍스트, 색상, 굵기, 모서리(radius), 그림자 등
 6. Composite                  
   - Layer 합성                   cf. transform, opacity is only Composit
+
+
+> 실무에서 firstChild 보다는 firstElementChild 를 더 자주 쓴다
+
+$로 시작하는 것들은 *관례상* element다 
+
+[Playground Link](https://www.typescriptlang.org/play/?#code/MYewdgzgLgBBBccoCcCWYDmMC8MDkAhgEbB4DcAUBAHQA2ApplABaUUOwCeiYArgLZF6ySpxwwAjACYAzJVCQQDOiAwAKCABoYnAJRkgA)
