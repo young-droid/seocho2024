@@ -26,11 +26,11 @@ const sum = arr.reduce((sum, a) => {
 });
 console.log('🚀 ~ sum:', sum);
 
-// ex) objs의 각 원소를 reduce를 이용하여 합쳐보세요.
-const objs = [{ id: 1 }, { name: 'Hong' }, { addr: 'Seoul', id: 5 }];
-const obj = objs.reduce((obj, objs) => {
-  return obj + objs;
-});
-console.log('🚀 ~ obj ~ obj:', obj);
-//{id: 5, name: 'Hong', addr: 'Seoul'}
-assert.deepStrictEqual(obj, { id: 5, name: 'Hong', addr: 'Seoul' });
+// // ex) objs의 각 원소를 reduce를 이용하여 합쳐보세요.
+// const objs = [{ id: 1 }, { name: 'Hong' }, { addr: 'Seoul', id: 5 }];
+// const obj = objs.reduce((obj, objs) => {
+//   return obj + objs;
+// });
+// console.log('🚀 ~ obj:', obj);
+// //{id: 5, name: 'Hong', addr: 'Seoul'}
+// assert.deepStrictEqual(obj, { id: 5, name: 'Hong', addr: 'Seoul' });

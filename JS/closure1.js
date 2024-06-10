@@ -6,7 +6,7 @@ function f() {
 }
 
 const x = f();
-console.log("🚀 ~ x.count:", x.count);
+console.log('🚀 ~ x.count:', x.count);
 
 function f2() {
   let count = 0;
@@ -18,10 +18,11 @@ function f2() {
 
 const y = f2();
 const z = f2();
-console.log("🚀 ~ ycount:", y());
-console.log("🚀 ~ ycount:", y());
-console.log("🚀 ~ zcount:", z());
+console.log('🚀 ~ ycount:', y());
+console.log('🚀 ~ ycount:', y());
+console.log('🚀 ~ zcount:', z());
 
+console.log('-----클로저 예시 1');
 function discount() {
   // cf. currying
   const dcRate = 0.1; // private variable
@@ -32,8 +33,8 @@ function discount() {
 }
 
 const items = [
-  { item: "상품 A", price: 32000 },
-  { item: "상품 B", price: 45000 },
+  { item: '상품 A', price: 32000 },
+  { item: '상품 B', price: 45000 },
 ];
 const dc = discount();
 for (const { item, price: orgPrice } of items) {

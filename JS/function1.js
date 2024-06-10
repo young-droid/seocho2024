@@ -1,5 +1,5 @@
 function hello() {
-  return "Hello World";
+  return 'Hello World';
 }
 console.log(hello());
 
@@ -7,23 +7,23 @@ function Dog(name) {
   console.log(this);
   this.name = name;
 }
-Dog("max");
+Dog('max');
 console.log(this);
 console.log(globalThis.name);
 
-const lucy = new Dog("Lucy");
-console.log("🚀 ~ Lucy:", lucy);
-console.log("🚀 ~ Lucy:", lucy.name);
+const lucy = new Dog('Lucy');
+console.log('🚀 ~ Lucy:', lucy);
+console.log('🚀 ~ Lucy:', lucy.name);
 
 function printFnReturnValue(fn) {
   console.log(arguments);
 }
 
-console.log("======================");
+console.log('======================');
 const f1 = function ff(x, isLast) {
-  console.log("x = ", x);
+  console.log('x = ', x);
   if (isLast) return;
-  else ff("efg", true);
+  else ff('efg', true);
 };
 
 // console.log("======================");
@@ -36,15 +36,17 @@ const f1 = function ff(x, isLast) {
 f1(1); // OK
 
 function hi() {
-  console.log("Hi!", name);
+  console.log('Hi!', name);
 }
 
-hi.call("Hong");
+hi.call('Hong');
 
+//1.
 // const f = function () { return x+1}
 
-const f = (x) => {
-  return x + 1;
-};
+//2.
+// const f = (x) => {
+//   return x + 1;
+// };
 
-console.log("🚀 ~ f ~ x:", x);
+//3.
