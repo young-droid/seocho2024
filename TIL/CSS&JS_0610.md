@@ -1,8 +1,9 @@
 # CSS(Bootstrap, TailWind), JS
 
-> tailwind, bootstrap 사이트 들어가서 열심히 공부해보자
-> JS 보다 TS 가 더 어렵다.
-> TS 도 https://typescriptlang.org/ <- 여기 가서 열심히 공부하자
+> tailwind, bootstrap 사이트 들어가서 열심히 공부해보자.
+> 오늘 수업 초반에 CSS 한 부분은 교수님 코드 보면서 분석해보자.   
+> JS 보다 TS 가 더 어렵다.  
+> TS 도 https://typescriptlang.org/ <- 여기 가서 열심히 공부하자. 
 
 ## Browser Rendering
 1. Connect & Request to Server
