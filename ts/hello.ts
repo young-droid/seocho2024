@@ -70,3 +70,65 @@ function getX1(obj: XUser) {
   return obj.name;
 }
 console.log(getX1(xuser));
+
+console.log('===========================');
+
+type Mul = (a: number, b: number, c?: number, d?: number) => number;
+
+// function mul(a: number, b: number): number;
+// function mul(a: number, b: number, c: number): number;
+
+function mul(a: number, b: number, c?: number, d?: number) {
+  if (typeof c === 'number' && typeof d === 'number') return a * b * c * d;
+  if (typeof c === 'number') return a * b * c;
+  return a * b;
+}
+
+console.log(mul(1, 2, 3, 4));
+console.log(mul(1, 2, 3));
+console.log(mul(1, 2));
+
+console.log('===========================');
+
+const oneToTen = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+type NaverKakaoUser = {
+  id: number;
+  // nickname: string;
+  // name: string;
+  // email: string;
+  [k: string]: string | number;
+};
+
+// const kUser: NaverKakaoUser =
+
+const nums1 = [1, 2, 3, 4, 5]; // number[]
+const nums2 = [10, 20, 30, 40, 50]; // number[]
+
+const result1 = nums1.concat(nums2);
+// 당연히 result1은 number[]
+
+const strings1 = ['lim', 'eun', 'ha'];
+// const result2 = result1.concat(strings1);
+const result2 = [...result1, ...strings1];
+console.log('🚀 ~ result2:', result2);
+
+type A = {
+  name: string;
+  age: number;
+};
+
+type B = {
+  name: string;
+  addr: string;
+};
+const onlyA: A[] = [
+  { name: 'lim', age: 10 },
+  { name: 'hong', age: 20 },
+];
+const onlyB: B[] = [
+  { name: 'jang', addr: 'Seoul' },
+  { name: 'park', addr: 'Busan' },
+];
+const aOrB = [...onlyA, ...onlyB];
+// (A|B)[]
