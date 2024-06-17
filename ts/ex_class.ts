@@ -12,6 +12,7 @@ class Student {
 }
 
 class Tranfer extends Student {
+  
   cleaning() {
     throw new Error('전학생은 청소에서 제외됩니다');
   }
