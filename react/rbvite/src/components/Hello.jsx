@@ -1,4 +1,5 @@
 export default function Hello(props) {
+  // console.log('Heeeeeeeeelo')
   return (
     <h1
       onClick={props.plusCount}
@@ -6,8 +7,8 @@ export default function Hello(props) {
         cursor: 'pointer',
       }}
     >
-      Hello, {props.name}!
-      <small className="font-sm text-red-500">{props.age}</small>
+      Hello, {props.name}!{' '}
+      <small className="font-sm text-red-500">({props.age + 1})</small>
     </h1>
   );
 }
