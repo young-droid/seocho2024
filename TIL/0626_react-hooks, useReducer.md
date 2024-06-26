@@ -7,7 +7,8 @@ re-render는 언제 진행되는가?
 - useMemo: 	재계산 되는 상황을 제약하는 것
 - memo :	컴포넌트를 새로 그리는 것
 - useLayout : 비동기. 이거 안끝나면 페인트를 못함. 여기서 과도한 연산 진행하면 버벅거림. 버벅거림을 잡기 위해 useEffect를 사용함
-- useEffect : 
+- useEffect :
+###### hooks
 - useContext
 	- context : 구획
 - useReducer
@@ -38,10 +39,14 @@ ref 속에는 .current 가 있다.
 
 
 
-## useContext
-
-<SC> <A/> </SC>
-
+## hooks (hooks 폴더 속 뫄뫄-context.jsx 파일들) 
+- hook 들은 관례상 앞에 use를 붙여서 사용. 
+- 예시: 
+  - useContext
+  - useCount
+ 
+- counter-context.jpx
+- session-context.jpx
 
 value는 항상 객체 포맷
 ```
