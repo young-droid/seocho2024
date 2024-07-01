@@ -1,7 +1,7 @@
-import { memo, useEffect, useRef } from "react";
-import { FaCartPlus, FaSave, FaUndoAlt } from "react-icons/fa";
-import Button from "./atoms/Button";
-import Input from "./atoms/Input";
+import { memo, useEffect, useRef } from 'react';
+import { FaCartPlus, FaSave, FaUndoAlt } from 'react-icons/fa';
+import Button from './atoms/Button';
+import Input from './atoms/Input';
 
 export default function ItemEdit({ cancel, save, item }) {
   const nameRef = useRef();
@@ -11,12 +11,13 @@ export default function ItemEdit({ cancel, save, item }) {
 
   const saveItem = (evt) => {
     evt.preventDefault();
+    evt.stopPropagation();
     const name = nameRef.current.value;
     // console.log("🚀  name:", name);
     const price = priceRef.current.value;
     // console.log("🚀  itemName, itemPrice:", name, price);
     if (!name || !price) {
-      alert("상품명과 금액을 정확히 입력하세요!");
+      alert('상품명과 금액을 정확히 입력하세요!');
       nameRef.current.focus();
       return;
     }
